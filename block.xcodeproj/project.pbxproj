@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		674FBF9E21479C44009A0DC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 674FBF9D21479C44009A0DC0 /* main.m */; };
+		67C2C58F214924F100AE46D5 /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C2C58C214924F100AE46D5 /* libffi.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,17 @@
 /* Begin PBXFileReference section */
 		674FBF9A21479C44009A0DC0 /* block */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = block; sourceTree = BUILT_PRODUCTS_DIR; };
 		674FBF9D21479C44009A0DC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		67C2C584214924F100AE46D5 /* ffitarget_arm64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget_arm64.h; sourceTree = "<group>"; };
+		67C2C585214924F100AE46D5 /* ffitarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget.h; sourceTree = "<group>"; };
+		67C2C586214924F100AE46D5 /* ffi_arm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi_arm.h; sourceTree = "<group>"; };
+		67C2C587214924F100AE46D5 /* ffi_i386.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi_i386.h; sourceTree = "<group>"; };
+		67C2C588214924F100AE46D5 /* ffitarget_x86_64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget_x86_64.h; sourceTree = "<group>"; };
+		67C2C589214924F100AE46D5 /* ffi_x86_64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi_x86_64.h; sourceTree = "<group>"; };
+		67C2C58A214924F100AE46D5 /* ffitarget_arm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget_arm.h; sourceTree = "<group>"; };
+		67C2C58B214924F100AE46D5 /* ffitarget_i386.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget_i386.h; sourceTree = "<group>"; };
+		67C2C58C214924F100AE46D5 /* libffi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libffi.a; sourceTree = "<group>"; };
+		67C2C58D214924F100AE46D5 /* ffi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi.h; sourceTree = "<group>"; };
+		67C2C58E214924F100AE46D5 /* ffi_arm64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi_arm64.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67C2C58F214924F100AE46D5 /* libffi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,9 +70,28 @@
 		674FBF9C21479C44009A0DC0 /* block */ = {
 			isa = PBXGroup;
 			children = (
+				67C2C583214924F100AE46D5 /* libffi */,
 				674FBF9D21479C44009A0DC0 /* main.m */,
 			);
 			path = block;
+			sourceTree = "<group>";
+		};
+		67C2C583214924F100AE46D5 /* libffi */ = {
+			isa = PBXGroup;
+			children = (
+				67C2C584214924F100AE46D5 /* ffitarget_arm64.h */,
+				67C2C585214924F100AE46D5 /* ffitarget.h */,
+				67C2C586214924F100AE46D5 /* ffi_arm.h */,
+				67C2C587214924F100AE46D5 /* ffi_i386.h */,
+				67C2C588214924F100AE46D5 /* ffitarget_x86_64.h */,
+				67C2C589214924F100AE46D5 /* ffi_x86_64.h */,
+				67C2C58A214924F100AE46D5 /* ffitarget_arm.h */,
+				67C2C58B214924F100AE46D5 /* ffitarget_i386.h */,
+				67C2C58C214924F100AE46D5 /* libffi.a */,
+				67C2C58D214924F100AE46D5 /* ffi.h */,
+				67C2C58E214924F100AE46D5 /* ffi_arm64.h */,
+			);
+			path = libffi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +270,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/block/libffi",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -246,6 +282,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/block/libffi",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
