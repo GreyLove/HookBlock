@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		674FBF9E21479C44009A0DC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 674FBF9D21479C44009A0DC0 /* main.m */; };
+		678F2EF3214A46F300982BF1 /* HookBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 678F2EF2214A46F300982BF1 /* HookBlock.m */; };
 		67C2C58F214924F100AE46D5 /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C2C58C214924F100AE46D5 /* libffi.a */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,8 @@
 /* Begin PBXFileReference section */
 		674FBF9A21479C44009A0DC0 /* block */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = block; sourceTree = BUILT_PRODUCTS_DIR; };
 		674FBF9D21479C44009A0DC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		678F2EF1214A46F300982BF1 /* HookBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HookBlock.h; sourceTree = "<group>"; };
+		678F2EF2214A46F300982BF1 /* HookBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HookBlock.m; sourceTree = "<group>"; };
 		67C2C584214924F100AE46D5 /* ffitarget_arm64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget_arm64.h; sourceTree = "<group>"; };
 		67C2C585214924F100AE46D5 /* ffitarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget.h; sourceTree = "<group>"; };
 		67C2C586214924F100AE46D5 /* ffi_arm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi_arm.h; sourceTree = "<group>"; };
@@ -72,6 +75,8 @@
 			children = (
 				67C2C583214924F100AE46D5 /* libffi */,
 				674FBF9D21479C44009A0DC0 /* main.m */,
+				678F2EF1214A46F300982BF1 /* HookBlock.h */,
+				678F2EF2214A46F300982BF1 /* HookBlock.m */,
 			);
 			path = block;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				678F2EF3214A46F300982BF1 /* HookBlock.m in Sources */,
 				674FBF9E21479C44009A0DC0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
